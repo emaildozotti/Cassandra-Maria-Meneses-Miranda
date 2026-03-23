@@ -11,7 +11,7 @@ export function Hero() {
         aria-hidden="true"
         className="absolute top-[-20%] left-[-10%] w-[55vw] h-[55vw] rounded-full blur-[100px] pointer-events-none"
         style={{
-          backgroundColor: '#0D1B2A66',
+          backgroundColor: '#1E4A6A55',
           animation: 'aurora-1 14s ease-in-out infinite',
         }}
       />
@@ -50,11 +50,12 @@ export function Hero() {
 
           {/* Left — Headline (mobile: first) */}
           <div className="flex flex-col gap-6 order-1 md:order-1">
+            {/* Callout — FIXED: no longer repeats H1 */}
             <div
               className="eyebrow-ultra"
               style={{ animation: 'fadeUp 0.8s ease forwards', animationDelay: '0s', opacity: 0 }}
             >
-              CANSADA DE DAR CONTA DE TUDO
+              SAÚDE EMOCIONAL
             </div>
 
             <h1
@@ -96,11 +97,12 @@ export function Hero() {
           </div>
 
           {/* Right — Foto (mobile: second) */}
-          <div className="flex justify-center md:justify-end order-2 md:order-2"
+          <div
+            className="flex justify-center md:justify-end order-2 md:order-2"
             style={{ animation: 'fadeUp 1s ease forwards', animationDelay: '0.2s', opacity: 0 }}
           >
             <div className="relative w-full max-w-[420px]">
-              {/* Frame Porto Noturno */}
+              {/* Frame Treatment A — rotated back frame */}
               <div className="absolute inset-0 -rotate-2 rounded-sm bg-[#0D1B2A] border border-[#3B6B9E]/40 translate-x-3 translate-y-3" />
               <img
                 src="/images/about.jpg"
@@ -113,7 +115,7 @@ export function Hero() {
                   if (placeholder) placeholder.style.display = 'flex'
                 }}
               />
-              {/* Placeholder quando imagem não carregada */}
+              {/* Placeholder */}
               <div
                 className="relative w-full aspect-[3/4] rounded-sm bg-[#1E3A5F] border border-[#3B6B9E]/30 flex-col items-center justify-center gap-3 hidden"
                 aria-hidden="true"
